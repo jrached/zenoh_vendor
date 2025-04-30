@@ -38,8 +38,8 @@
       // shm_enabled: false,
 
       allow: {
-         publishers: [".*/pose", ".*/cmd_vel"],
-         subscribers: ["/mission_control", "/pac_gcs/mission_origin_gps", ".*/cmd_vel", "/sim/all_robot_sim_poses", "/pac_gcs/status_pac"],
+         publishers:  [".*/d455/depth/color/points", ".*/pose", "/tf", "/tf_static", ".*/tracked_obstacles", ".*/cluster_bounding_boxes", ".*/uncertainty_spheres", ".*/dynamic_map_marker", ".*/traj_committed_colored"],
+         subscribers: [".*/pose", ".*/world"],
       //   service_servers: [".*/.*_parameters"],
          service_clients: ["/sim/get_system_info"],
       //   action_servers: [".*/rotate_absolute"],
@@ -135,7 +135,7 @@
   //// I WOULD SWITCH TO UDP
   connect: {
     endpoints: [
-      "tcp/192.168.0.204:7447"
+     // "tcp/192.168.0.204:7447"
     ]
   },
 
