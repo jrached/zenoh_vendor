@@ -38,8 +38,9 @@
       // shm_enabled: false,
 
       allow: {
-         publishers: [".*/pose", "/trajs"],
-         subscribers: [".*/pose", "/trajs", ".*/world"],
+         publishers: [".*/mavros/state", "/tf", "/tf_static", "/trajs"],
+         // publishers: [".*/pose", "/trajs"],
+         subscribers: [".*/mavros/state", "/trajs", ".*/world", "/tf", "/tf_static"],
       //   service_servers: [".*/.*_parameters"],
          service_clients: ["/sim/get_system_info"],
       //   action_servers: [".*/rotate_absolute"],
@@ -136,9 +137,6 @@
   connect: {
     endpoints: [
       "tcp/192.168.0.20:7447", //GCS
-      "tcp/192.168.0.119:7447", //PX02
-      "tcp/192.168.0.191:7447", //PX03
-      "tcp/192.168.0.189:7447", //BD01
     ]
   },
 
