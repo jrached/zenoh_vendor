@@ -38,8 +38,7 @@
       // shm_enabled: false,
 
       allow: {
-         publishers: [".*/d455/depth/color/points", ".*/pose", "/tf", "/tf_static", ".*/tracked_obstacles", ".*/cluster_bounding_boxes", ".*/uncertainty_spheres", ".*/dynamic_map_marker", ".*/traj_committed_colored"],
-         // publishers: [".*/pose", "/trajs"],
+         publishers: [".*/pose", "/trajs"],
          subscribers: [".*/pose", "/trajs", ".*/world"],
       //   service_servers: [".*/.*_parameters"],
          service_clients: ["/sim/get_system_info"],
