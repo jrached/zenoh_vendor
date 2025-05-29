@@ -125,7 +125,7 @@
   //// SET TO 'ROUTER' FOR THE GCS ONLY AND 'CLIENT' FOR ALL DRONES IN
   //// CENTRALIZED EXPERIMENT, SET TO 'PEERS' FOR DRONES IN DECENTRALIZED
   //// EXPERIMENTS
-  mode: "peers", 
+  mode: "peer", 
 
   ////
   //// Which endpoints to connect to. E.g. tcp/localhost:7447.
