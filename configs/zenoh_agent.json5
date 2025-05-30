@@ -38,9 +38,9 @@
       // shm_enabled: false,
 
       allow: {
-         publishers: [".*/mavros/state", "/tf", "/tf_static", "/trajs"],
+         publishers: [".*/mavros/state", "/trajs", "/tf"],
          // publishers: [".*/pose", "/trajs"],
-         subscribers: [".*/mavros/state", "/trajs", ".*/world", "/tf", "/tf_static"],
+         subscribers: [".*/mavros/state", "/trajs", "/tf", ".*/world"],
       //   service_servers: [".*/.*_parameters"],
          service_clients: ["/sim/get_system_info"],
       //   action_servers: [".*/rotate_absolute"],
