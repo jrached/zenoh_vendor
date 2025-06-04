@@ -33,4 +33,5 @@ ros2 run zenoh_vendor -c zenoh-bridge-ros2dds /workspace/src/zenoh_vendor/config
    ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
    ```
 5. It is crucial that the native ROS2 middleware, in this case CycloneDDS, is not configured to use the device's wifi port. If it is, both Zenoh and CycloneDDS will run across the network, which will cause undesired behavior - such as disabled topics leaking through and publishing loopback (topics publish at > 1000 Hz frequencies).
+6. The Zenoh bridge has a maximum throughput of about 5 Mb/s. If any topic exceeds that limit, its publishing frequency will be reduced to accomodate the throughput cap. 
 
