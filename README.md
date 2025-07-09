@@ -19,7 +19,7 @@ ros2 run zenoh_vendor -c /workspace/src/zenoh_vendor/configs/zenoh_gcs.json5
 
 On the the vehicle:
 ```bash
-ros2 run zenoh_vendor -c zenoh-bridge-ros2dds /workspace/src/zenoh_vendor/configs/zenoh_agent.json5
+ros2 run zenoh_vendor zenoh-bridge-ros2dds -c /workspace/src/zenoh_vendor/configs/zenoh_agent.json5
 ```
 
 **Notes** 
